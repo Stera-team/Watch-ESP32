@@ -1,7 +1,7 @@
 
 #define DHT_PIN 5
 #define BTN_PIN 25
-#define BUZZER_PIN 13
+#define BUZZER_PIN 4
 
 #define WIFI_SSID "TP-Link_Guest"
 #define WIFI_PASSWORD ""
@@ -231,7 +231,7 @@ void updateButtonTask(void * pvParameters){
       if (button.isTriple()) nowProgram = "connectingToBridge";
 
     } else {
-       if (button.isDouble()) isNowAlarm = false;
+       if (button.isSingle()) isNowAlarm = false;
     }
     
 
